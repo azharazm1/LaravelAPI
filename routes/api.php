@@ -13,6 +13,7 @@ Route::prefix('v1')->group(function(){
     Route::post('store-articles',[App\Http\Controllers\API\v1\ArticleController::class,'store'])->middleware('api');
     Route::get('read-articles/{id}',[App\Http\Controllers\API\v1\ArticleController::class,'show']);
     Route::put('update-articles/{id}',[App\Http\Controllers\API\v1\ArticleController::class,'update']);
+    Route::delete('delete-articles/{id}',[App\Http\Controllers\API\v1\ArticleController::class, 'destroy']);
 });
 
 // Route::get('list-articles',[App\Http\Controllers\API\v1\ArticleController::class,'index']);
